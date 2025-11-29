@@ -856,7 +856,7 @@ background: linear-gradient(180deg,
   .container{
     margin-inline: 1rem;
   }
-
+  
   .services__modal{
     padding-inline: .5rem;
   }
@@ -888,7 +888,7 @@ background: linear-gradient(180deg,
     grid-template-columns: repeat(2, 320px);
   }
   .work__container{
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(3, 350px);
 
   }
 
