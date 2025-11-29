@@ -162,6 +162,7 @@ body.dark-theme{
 .dark-theme .bg-header{
   box-shadow: 0 12px 24px var(--shadow-color);
 }
+
 .dark-theme .perfil__content{
   background: linear-gradient(180deg,
     hsl(215, 55%, 65%),
@@ -364,23 +365,25 @@ background: linear-gradient(180deg,
 
 
 /*=============== HOME ===============*/
+.main{
+  justify-content: center;
+}
 .home{
   position: relative;
   border-bottom: 8px solid var(--first-color);
 }
 
-.home__retangle{
-  width: 100%;
-  height: 22  0px;
-  background-color: var(--first-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.home__retactangle{
+  justify-content: center;
 }
 
 .home__container{
-  padding-block: 1rem 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 2rem;
+  width: 100%;
+  max-width: 1440x; /* Hoặc giá trị lớn hơn nếu muốn */
+  margin-inline: auto;
 }
 
 .home__perfil{
@@ -388,16 +391,16 @@ background: linear-gradient(180deg,
 }
 
 .home__data{
-  row-gap: .75rem;
-  text-align: center;
+  width: 100%;
+  max-width: 600px; /* Điều chỉnh giá trị này để chữ không bị xuống dòng */
 }
 
 .home__name{
-  font-size: var(--biggest-font-size);
+  white-space: nowrap; /* Nếu muốn title "Nhut Phongg" nằm trên 1 dòng */
 }
 
 .home__profession{
-  font-size: var(--h2-font-size);
+  white-space: nowrap; /* Nếu muốn subtitle nằm trên 1 dòng */
 }
 
 .home__social{
@@ -952,7 +955,7 @@ background: linear-gradient(180deg,
     width: 500px;
     height: 500px;
     border-width: 15px;
-    margin-left: 4rem;
+    margin-left: 25rem;
   }
   .perfil__content{
     width: 360px;
@@ -979,12 +982,14 @@ background: linear-gradient(180deg,
   .home__data{
     row-gap: 1rem;
     text-align: initial;
+    margin-left: 10rem;
   }
   .home__name{
     font-size: 3.5rem;
   }
   .home__profession{
-    font-size: var(--h1-font-size)
+    font-size: var(--h1-font-size);
+    margin-top: 0.7rem;
   }
   .home__social{
     justify-content: start;
@@ -995,8 +1000,12 @@ background: linear-gradient(180deg,
   .home__button{
     justify-self: flex-start;
     font-size: var(--h1-font-size);
+    margin-left: 10rem;
   }
 
+  .section__title{
+    font-size: 2.5rem;
+  }
   .services__container{
     grid-template-columns: repeat(2, 345px);
   }
@@ -1008,7 +1017,7 @@ background: linear-gradient(180deg,
     padding: 5.5rem 2rem;
   }
   .services__modal-title{
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .work__container{
