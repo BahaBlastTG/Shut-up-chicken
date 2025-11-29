@@ -162,7 +162,12 @@ body.dark-theme{
 .dark-theme .bg-header{
   box-shadow: 0 12px 24px var(--shadow-color);
 }
-
+.dark-theme .perfil__content{
+  background: linear-gradient(180deg,
+    hsl(215, 55%, 65%),
+    hsl(215, 64%, 35%)
+  );
+}
 .dark-theme .services__modal{
   background-color: hsla(var(--hue), 90%, 8%, .2);
 }
